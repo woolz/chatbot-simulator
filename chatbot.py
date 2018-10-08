@@ -50,9 +50,6 @@ class ChatbotSimulator:
         except:
             return False
 
-    def normalize(self, string):
-        return unicodedata.normalize('NFKD', string).encode('ascii','xmlcharrefreplace')#encode('ascii', 'ignore')
-
     def append_record(self, name, value):
         value = value.replace('+', ' ')
         value = value.replace(':::', '').replace('|||', '')
