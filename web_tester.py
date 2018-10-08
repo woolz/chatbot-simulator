@@ -1,6 +1,5 @@
 #!flask/bin/python
 import six
-import nltk
 import sys
 import re
 import urllib
@@ -13,9 +12,7 @@ from itertools import chain
 from datetime import timedelta
 from chatbot import ChatbotSimulator
 import requests
-import MySQLdb
 import json
-import unicodedata
 import datetime
 import base64
 
