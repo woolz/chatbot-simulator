@@ -10,6 +10,7 @@ This library is able to simulate a chatbot in any plataform by rest api.
 First, copy "www" folder at your apache server.
 
 After it, run the connector by the terminal.
+
 `python web_tester.py`
 
 <img alt="example1" src="https://i.imgur.com/eP75lDE.png">
