@@ -1,0 +1,202 @@
+[
+    {
+        "id": "0",
+        "sec_type": "options",
+        "message": "\nWelcome to our Virtual Customer Service** \ud83e\uddd0\ud83e\udd1d\n*Input one choice bellow to continue...*",
+        "error_message": "An error occurred, try again...",
+        "style_choice": "{number} - {option}",
+        "error_callback": true,
+        "save_has": "myfirstchoice",
+        "options": [
+            {
+                "id": 0,
+                "name": "Request List",
+                "functions": {
+                    "goto": "1"
+                }
+            },
+            {
+                "id": 1,
+                "name": "About us",
+                "functions": {
+                    "goto": "8"
+                }
+            },
+            {
+                "id": 2,
+                "name": "Report",
+                "functions": {
+                    "goto": "9"
+                }
+            }
+        ]
+    },
+    {
+        "id": "1",
+        "sec_type": "sell",
+        "message": "_Product List:_ \ud83c\udf5f\ud83c\udf54\ud83c\udf2d\ud83c\udf55\ud83c\udfd3\n",
+        "example_message": "Enter the number of the product (s) you want ... Example: 2,2,1\n\n",
+        "error_message": "An error occurred, try again...",
+        "style_choice": "{number} - {option} $ {price}",
+        "error_callback": true,
+        "functions": {
+            "calc_values_by_virgule": true,
+            "goto": 2
+        },
+        "confirmation_message": "\"{%products%}\" stay $ {%price%}, agrees?",
+        "save_has": "request",
+        "options": [
+            {
+                "id": 0,
+                "name": "Potato portion",
+                "price": 15
+            },
+            {
+                "id": 1,
+                "name": "Pizza",
+                "price": 10
+            },
+            {
+                "id": 2,
+                "name": "Cheeseburger",
+                "price": 8
+            }
+        ]
+    },
+    {
+        "id": "2",
+        "sec_type": "send",
+        "message": "Now we need your address._..._ \ud83c\udfe0\ud83c\udfe8\n",
+        "example_message": "\nEnter your address in full .. Example: Calif\u00f3rnia City, Central Park, n\u00ba 3232\n",
+        "error_message": "An error occurred, try again...",
+        "style_choice": "{number} - {option}",
+        "error_callback": true,
+        "functions": {
+            "calc_distance": true,
+            "goto": 3
+        },
+        "config": {
+            "origin_address": "Calif\u00f3rnia City, Central Park, n\u00ba 3132",
+            "method": "fixed",
+            "cost": 10
+        },
+        "confirmation_message": "The delivery has an additional cost of $ {%price%}, agrees?",
+        "save_has": "sendfrom"
+    },
+    {
+        "id": "3",
+        "sec_type": "info",
+        "message": "We are almost there... just some more information\n",
+        "functions": {
+            "goto": 4
+        }
+    },
+    {
+        "id": "4",
+        "sec_type": "options",
+        "message": "Payment method?",
+        "error_message": "An error occurred, try again...",
+        "style_choice": "{number} - {option}",
+        "error_callback": true,
+        "save_has": "paymethod",
+        "options": [
+            {
+                "id": 0,
+                "name": "Money",
+                "functions": {
+                    "goto": "5"
+                }
+            },
+            {
+                "id": 1,
+                "name": "Credit Card",
+                "functions": {
+                    "goto": "7"
+                }
+            }
+        ]
+    },
+    {
+        "id": "5",
+        "sec_type": "options",
+        "message": "Transshipment?\n",
+        "error_message": "An error occurred, try again...",
+        "style_choice": "{number} - {option}",
+        "error_callback": true,
+        "save_has": "transshipment",
+        "options": [
+            {
+                "id": 0,
+                "name": "Yes",
+                "functions": {
+                    "goto": "6"
+                }
+            },
+            {
+                "id": 1,
+                "name": "No",
+                "functions": {
+                    "goto": "7"
+                }
+            }
+        ]
+    },
+    {
+        "id": "6",
+        "sec_type": "question",
+        "message": "How much?\n",
+        "type": "others",
+        "error_message": "An error occurred, try again...",
+        "error_callback": true,
+        "functions": {
+            "wait_input": true,
+            "goto": 7
+        },
+        "save_has": "howmuch"
+    },
+    {
+        "id": "7",
+        "sec_type": "info",
+        "message": "Your order has been registered and will be delivered within 30 minutes\n",
+        "functions": {
+            "goto": 11
+        }
+    },
+    {
+        "id": "8",
+        "sec_type": "info",
+        "message": "We are a new delivery food service that has recently appeared in the city of California and we love what we do",
+        "functions": {
+            "goto": 0
+        }
+    },
+    {
+        "id": "9",
+        "sec_type": "question",
+        "message": "Write in a message all the problems that have affected you...\n",
+        "type": "others",
+        "error_message": "An error occurred, try again...",
+        "error_callback": true,
+        "functions": {
+            "wait_input": true,
+            "goto": 10
+        },
+        "save_has": "problem"
+    },
+    {
+        "id": "10",
+        "sec_type": "info",
+        "message": "Your report has been recorded, we will contact you shortly.\n",
+        "functions": {
+            "goto": 11
+        }
+    },
+    {
+        "id": "11",
+        "sec_type": "end",
+        "message": "Call completed, type something to start over...\n",
+        "functions": {
+            "close": true
+        }
+    }
+]

@@ -1,0 +1,22 @@
+[
+    {
+        "id": "0",
+        "sec_type": "getrest",
+        "rest_url": "http:\/\/date.jsontest.com\/",
+        "rest_message": "Today is {%date%} {%time%}",
+        "error_message": "An error ocurred to access [date.jsontest.com]",
+        "error_callback": false,
+        "functions": {
+            "api_information": true,
+            "goto": 1
+        }
+    },
+    {
+        "id": "1",
+        "sec_type": "end",
+        "message": "Put any word to get date gain...",
+        "functions": {
+            "close": true
+        }
+    }
+]

@@ -1,0 +1,84 @@
+[
+    {
+        "id": "0",
+        "sec_type": "options",
+        "message": "Welcome to our Virtual Customer Service, CLINIC SANDIEGO! *\n*\n**\ud83d\udc68\u2695\ufe0f",
+        "error_message": "An error ocurred... try again...",
+        "style_choice": "{number} - {option}",
+        "error_callback": true,
+        "save_has": "clinic",
+        "options": [
+            {
+                "id": 0,
+                "name": "Mark query",
+                "functions": {
+                    "goto": "1"
+                }
+            }
+        ]
+    },
+      {
+        "id": "1",
+        "sec_type": "question",
+        "message": "What's your name?",
+        "type": "others",
+        "error_message": "An error ocurred... try again...",
+        "error_callback": true,
+        "functions": {
+            "wait_input": true,
+            "goto": 2
+        },
+        "save_has": "name"
+    },
+    {
+        "id": "2",
+        "sec_type": "question",
+        "message": "What's your ID?",
+        "type": "others",
+        "error_message": "An error ocurred... try again...",
+        "error_callback": true,
+        "functions": {
+            "wait_input": true,
+            "goto": 3
+        },
+        "save_has": "id"
+    },
+    {
+        "id": "3",
+        "sec_type": "mark",
+        "message": "Let's book your appointment now. \ud83d\uddc2\ud83d\udd8a\n",
+        "example_message": "Enter a date to check availability, eg\n25\/10\n",
+        "error_message": "You entered an invalid format \/ value ... try again",
+        "style_choice": "{number} - {option}",
+        "datefull_message": "No available time for this date...**",
+        "dateopen_message": "For {%date%} we have the following available schedules:",
+        "error_callback": true,
+        "config": {
+            "monday": true,
+            "tuesday": true,
+            "wednesday": true,
+            "thursday": true,
+            "friday": true,
+            "saturday": false,
+            "sunday": false,
+            "query_hours": "09:00-12:00, 13:00-18:00",
+            "holidays": false,
+            "query_time": "30",
+            "exception_dates": "25\/12"
+        },
+        "functions": {
+            "mark_consultation": true,
+            "goto": 4
+        },
+        "confirmation_message": "{%date%} at the time of {%time%} is available, agress?",
+        "save_has": "query"
+    },
+    {
+        "id": "4",
+        "sec_type": "end",
+        "message": "Your appointment has been successfully booked.\n",
+        "functions": {
+            "close": true
+        }
+    }
+]

@@ -1,0 +1,29 @@
+[
+    {
+        "id": "0",
+        "sec_type": "restquery",
+        "rest_url": "http:\/\/md5.jsontest.com/",
+        "rest_message": "The word {%original%} has cript in md5 hash: {%md5%}",
+        "error_message": "An error ocurred... try again...",
+        "error_callback": false,
+        "functions": {
+            "api_integration": true,
+            "goto": 1
+        },
+        "method": "GET",
+        "rest_url_vars": [
+            {
+                "input_string": "text",
+                "question": "Write any text..."
+            }
+        ]
+    },
+    {
+        "id": "1",
+        "sec_type": "end",
+        "message": "Put any word to get date gain...",
+        "functions": {
+            "close": true
+        }
+    }
+]
