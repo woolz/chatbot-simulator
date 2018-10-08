@@ -1,5 +1,5 @@
 # chatbot-simulator
-This library is able to simulate a chatbot in any plataform by rest api.
+This library is able to simulate a chatbot in any plataform by rest api method.
 
 
 ## Install python dependencies
