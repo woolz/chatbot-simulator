@@ -12,7 +12,6 @@ from itertools import chain
 from datetime import timedelta
 import requests
 import json
-import unicodedata
 import datetime
 import base64
 import binascii
