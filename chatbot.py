@@ -141,10 +141,10 @@ class ChatbotSimulator:
         api_information = False
         mark_consultation = False
         
-        x = self.user_section
+        x = int(self.user_section)
         messages = ""
         funcs = ""
-        get_number_rule = self.bot_rules[x]['id']
+        #get_number_rule = self.bot_rules[x]['id']
 
         if  self.bot_rules[x].get('message'):
             get_message = self.bot_rules[x]['message']
