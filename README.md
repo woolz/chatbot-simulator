@@ -1,4 +1,4 @@
-# ptbr-best-synonym
+# chatbot-simulator
 This library is able to simulate a chatbot in any plataform by rest api.
 
 
@@ -7,13 +7,16 @@ This library is able to simulate a chatbot in any plataform by rest api.
 
 
 ## Run at Web
-First, copy "www" folder at your apache server.
-After it, run the connector by the terminal. 
+First, copy "www" folder at your apache server.<br>
+
+After it, run the connector by the terminal. <br>
 `python web_tester.py`
+
 <img alt="example1" src="https://i.imgur.com/eP75lDE.png">
 
 ## Run at Terminal
 `python terminal_tester.py`
+
 <img alt="example2" src="https://i.imgur.com/Sd9pdxK.png">
 
 
