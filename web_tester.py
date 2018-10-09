@@ -7,7 +7,6 @@ import json
 import time
 from flask import Flask, jsonify, abort, request, make_response, url_for
 from flask_httpauth import HTTPBasicAuth
-from num2words import num2words
 from itertools import chain
 from datetime import timedelta
 from chatbot import ChatbotSimulator
