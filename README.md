@@ -1,6 +1,7 @@
 # chatbot-simulator
 This library is able to simulate a chatbot in any plataform by rest api method.
 
+Base on <b>Python 2.7</b>
 
 ## Install python dependencies
 `pip install -r requirements.txt`
