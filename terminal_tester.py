@@ -4,7 +4,7 @@ from chatbot import ChatbotSimulator
 
 cb = ChatbotSimulator(0, "Hello!", 0, 0, "fHx8")
 response = cb.chatbot_response()
-print response['message']
+print(response['message'])
 
 
 
@@ -14,12 +14,12 @@ while True:
         u_msg = raw_input('Please, enter a message...\n')
     cb = ChatbotSimulator(response['section'], u_msg, response['input'], response['retry'], response['record'])
     response = cb.chatbot_response()
-    print response['message']
+    print(response['message'])
 
     while (response['retry'] == 1 or not response['message']):
         cb = ChatbotSimulator(response['section'], 'null', response['input'], response['retry'], response['record'])
         response = cb.chatbot_response()
-        print response['message']
+        print(response['message'])
 
 
 
